@@ -27,7 +27,7 @@
   border-top-right-radius: 10px;
 }
 
-.card__description {
+.card__title {
   display: flex;
   max-width: 282px;
   background-color: white;
@@ -45,7 +45,7 @@
   text-overflow: ellipsis;
 }
 
-.card__title {
+.card__description {
   max-width: 282px;
   overflow: hidden;
   white-space: nowrap;
