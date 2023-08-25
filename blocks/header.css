@@ -1,0 +1,9 @@
+.header {
+  margin-top: 45px;
+  max-width: 880px;
+}
+.header__divider {
+  border-bottom: 1px solid #545454;
+  opacity: 70%;
+  flex-grow: 1;
+}
