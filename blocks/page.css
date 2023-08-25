@@ -2,6 +2,7 @@
   background-color: black;
   color: white;
   font-family: Inter, Arial, sans-serif;
+  font-style: normal;
 }
 
 .page__section {
@@ -9,14 +10,17 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .page__content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 880px;
-  margin: auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 620px) {
+  .page__content {
+    padding: 0;
+  }
 }
