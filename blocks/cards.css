@@ -1,16 +1,13 @@
-.gallery {
-  margin-top: 30px;
-  font-weight: 900;
-  line-height: 29px;
-}
-
-.gallery__cards {
+.cards {
   display: grid;
   justify-content: center;
   list-style-type: none;
   grid-template-columns: repeat(auto-fit, 282px);
   grid-gap: 20px 17px;
   padding: 0;
+  margin: 30px auto 0;
+  font-weight: 900;
+  line-height: 29px;
 }
 
 .card {
@@ -55,6 +52,6 @@
 }
 
 .card__like-button:hover {
-  opacity: 0.5%;
+  opacity: 0.5;
   cursor: pointer;
 }
