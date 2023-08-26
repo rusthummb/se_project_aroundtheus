@@ -83,14 +83,22 @@
   }
 
   .profile__title {
+    font-family: "Inter", Arial, sans-serif;
     font-size: 32px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
 @media screen and (max-width: 620px) {
   .profile {
+    font-family: "Inter", Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .profile__info {
@@ -107,12 +115,15 @@
   }
 
   .profile__title {
+    font-family: "Inter", Arial, sans-serif;
     font-size: 22px;
     line-height: 26.63px;
     text-align: center;
+    max-width: 196px;
   }
 
   .profile__description {
+    font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 16.94px;
