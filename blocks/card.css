@@ -38,7 +38,7 @@
 }
 
 .card__like-button {
-  background: transparent url(../images/add\ button\ small.png) center no-repeat;
+  background: transparent url(../images/inactive\ like.svg) center no-repeat;
   width: 25px;
   height: 18px;
   margin-right: 20px;
