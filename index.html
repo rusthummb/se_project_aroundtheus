@@ -24,11 +24,20 @@
           <img src="./images/Avatar.jpg" alt="Avatar" class="profile__image" />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
-            <button type="button" class="profile__edit-button"></button>
+            <button
+              type="button"
+              id="profile-button-edit"
+              class="profile__edit-button"
+            ></button>
             <p class="profile__description">Explorer</p>
           </div>
-          <button type="button" class="profile__add-button"></button>
+          <button
+            type="button"
+            id="profile-button-add"
+            class="profile__add-button"
+          ></button>
         </section>
+
         <section class="gallery page__section">
           <ul class="gallery__list">
             <li class="card">
@@ -101,30 +110,33 @@
       </footer>
     </div>
 
-    <div class="modal">
+    <!-- EDIT MODAL-->
+    <div class="modal" id="modal-edit-profile">
       <div class="modal__container">
         <button
+          class="modal__button-close"
+          id="modal-edit-button-close"
           type="button"
-          class="modal__close"
-          id="modal-close-button"
         ></button>
-        <h2 class="modal__heading">Edit Profile</h2>
-        <form class="modal__form">
+        <h3 class="modal__title">Edit Profile</h3>
+        <form name="modal-edit-form" class="modal__form" id="modal-form-edit">
+          <label for="edit-name" class="modal__form-label"></label>
           <input
-            class="modal__input-title"
             type="text"
-            name="title"
-            id="profile-input-title"
-            placeholder="Name"
+            class="modal__input"
+            id="edit-name"
+            placeholder="Username"
+            required
           />
+          <label for="edit-bio" class="modal__form-label"></label>
           <input
-            class="modal__input-description"
             type="text"
-            name="description"
-            id="modal-description-input"
-            placeholder="Description"
+            class="modal__input"
+            id="edit-bio"
+            placeholder="Bio"
+            required
           />
-          <button type="button" class="modal__button">Save</button>
+          <button class="modal__button-save" type="submit">Save</button>
         </form>
       </div>
     </div>
