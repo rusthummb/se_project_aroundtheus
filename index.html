@@ -31,6 +31,7 @@
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
+
           <button type="button" class="profile__add-button"></button>
         </section>
         <section class="gallery page__section">
@@ -43,7 +44,7 @@
     </div>
 
     <div class="modal" id="profile-edit-modal">
-      <div class="modal__container" id="profile-edit-modal">
+      <div class="modal__container">
         <button
           type="button"
           class="modal__close"
@@ -65,13 +66,13 @@
             id="profile-description-input"
             placeholder="Explorer"
           />
-          <button type="button" class="modal__save">Save</button>
+          <button class="modal__save">Save</button>
         </form>
       </div>
     </div>
     <template id="card-template">
       <li class="card">
-        <img alt="#" src="#" class="card__image" />
+        <img class="card__image" alt="#" src="#" />
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button type="button" class="card__like-button"></button>
