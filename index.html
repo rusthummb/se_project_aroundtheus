@@ -25,9 +25,9 @@
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
-              id="profile-edit-button"
               type="button"
               class="profile__edit-button"
+              id="profile-edit-button"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
@@ -42,30 +42,30 @@
       </footer>
     </div>
 
-    <div class="modal">
+    <div class="modal" id="profile-edit-modal">
       <div class="modal__container" id="profile-edit-modal">
         <button
           type="button"
           class="modal__close"
-          id="modal-edit-button-close"
+          id="modal-close-button"
         ></button>
-        <h3 class="modal__heading">Edit Profile</h3>
-        <form name="modal-edit-form" class="modal__form" id="modal-form-edit">
+        <p class="modal__heading">Edit Profile</p>
+        <form class="modal__form">
           <input
-            class="modal__input-title"
+            class="modal__form-title"
             type="text"
             name="title"
             id="profile-title-input"
-            placeholder="Name"
+            placeholder="Jacques Cousteau"
           />
           <input
-            class="modal__input-description"
+            class="modal__form-title"
             type="text"
             name="description"
             id="profile-description-input"
-            placeholder="Description"
+            placeholder="Explorer"
           />
-          <button type="button" class="modal__button">Save</button>
+          <button type="button" class="modal__save">Save</button>
         </form>
       </div>
     </div>
@@ -77,6 +77,7 @@
           <button type="button" class="card__like-button"></button>
         </div></li
     ></template>
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>

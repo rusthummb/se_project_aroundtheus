@@ -13,8 +13,7 @@
 }
 
 .profile__edit-button {
-  background: transparent url(../images/Edit\ button\ small.svg) center
-    no-repeat;
+  background: transparent url(../images/edit_sign.png) center no-repeat;
   height: 24px;
   width: 24px;
   margin: 15px 0 auto 18px;
