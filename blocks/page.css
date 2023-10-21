@@ -1,27 +1,23 @@
 .page {
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  background-color: black;
-  color: white;
-}
-
-.page__section {
-  max-width: 880px;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
+  background-color: #000;
 }
 
 .page__content {
-  display: flex;
+  margin: auto;
   flex-direction: column;
-  min-height: 100vh;
+  max-width: 1280px;
+  font-family: Inter, Arial, sans-serif;
+  padding: 0 18px 0;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 1100px) {
-  .page__section {
-    margin: 0px 20px;
-    max-width: 100%;
-    max-width: calc(100% - 40px);
-    overflow: wrap;
+.page__container {
+  max-width: 880px;
+  margin: auto;
+}
+
+@media screen and (max-width: 616px) {
+  .page__content {
+    padding: 0;
   }
 }

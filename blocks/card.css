@@ -1,70 +1,69 @@
 .card {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  border-radius: 10px;
-  overflow: hidden;
+  width: 282px;
   position: relative;
+}
+
+.card__trash-icon {
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.card__trash-icon:hover {
+  opacity: 60%;
+  transition: opacity 0.1s ease-in;
 }
 
 .card__image {
   width: 282px;
   height: 282px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
 }
 
-.card__description {
+.card__content {
+  padding: 25px 20px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: white;
-  color: black;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  align-items: center;
 }
 
 .card__title {
-  max-width: 220px;
+  color: #000;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
-  line-height: 29.05px;
-  font-size: 24px;
-  color: #000;
 }
 
-.card__like-button {
-  background: transparent url(../images/inactive\ like.svg) center no-repeat;
+.card__button {
+  background-image: url(../images/inactive\ like.svg);
   width: 21px;
   height: 18px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
   border: none;
-}
-
-.card__like-button_active {
-  background: transparent url(../images/like\ active.svg);
-}
-
-.card__like-button:hover {
-  opacity: 50%;
-  transition: 0.4s;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.card__button-remove {
-  background: transparent url(../images/Trash.svg);
-  position: absolute;
-  width: 18px;
-  height: 19.3px;
-  border: none;
-  left: 249px;
-  top: 18px;
-  cursor: pointer;
+.card__button_active {
+  background-image: url(../images/like\ active.svg);
 }
 
-.card__button-remove:hover {
+.card__button:hover {
   opacity: 50%;
+  transition: opacity 0.1s ease-in;
 }
