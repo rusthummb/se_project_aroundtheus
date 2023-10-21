@@ -23,12 +23,12 @@ function checkInputValidity(formElement, inputElement, options) {
 
 function enableButton(button, inactiveButtonClass) {
   button.classList.remove(inactiveButtonClass);
-  button.disabled = true;
+  button.disabled = false;
 }
 
 function disableButton(button, inactiveButtonClass) {
   button.classList.add(inactiveButtonClass);
-  button.disabled = false;
+  button.disabled = true;
 }
 
 function toggleButtonStates(inputElements, submitButton, options) {
