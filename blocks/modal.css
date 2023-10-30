@@ -53,7 +53,7 @@
   position: absolute;
   bottom: calc(100% + 5px);
   left: calc(100% + 5px);
-  background-image: url(../images/Close.svg);
+  background-image: url(../images/Close\ Icon.svg);
   width: 40px;
   height: 40px;
   border: none;
@@ -102,13 +102,13 @@
   width: 100%;
 }
 
+.modal__form-input_invalid {
+  border-bottom: 1px solid #ff0000;
+}
+
 .modal__form-label {
   display: inline;
   position: relative;
-}
-
-.modal__form-input:invalid {
-  border-bottom: 1px solid #ff0000;
 }
 
 .modal__input-error {

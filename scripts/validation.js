@@ -1,17 +1,27 @@
-function showInputError(formElement, inputElement, options) {
+function showInputError(
+  formElement,
+  inputElement,
+  { inputErrorClass, errorClass }
+) {
   const errorMessageElement = formElement.querySelector(
     `#${inputElement.id}-error`
   );
+  inputElement.classList.add(inputErrorClass);
   errorMessageElement.textContent = inputElement.validationMessage;
-  errorMessageElement.classList.add(options.inputErrorClass);
+  errorMessageElement.classList.add(errorClass);
 }
 
-function hideInputError(formElement, inputElement, options) {
+function hideInputError(
+  formElement,
+  inputElement,
+  { inputErrorClass, errorClass }
+) {
   const errorMessageElement = formElement.querySelector(
     `#${inputElement.id}-error`
   );
+  inputElement.classList.remove(inputErrorClass);
   errorMessageElement.textContent = "";
-  errorMessageElement.classList.remove(options.inputErrorClass);
+  errorMessageElement.classList.remove(errorClass);
 }
 
 function checkInputValidity(formElement, inputElement, options) {
@@ -38,13 +48,6 @@ function toggleButtonStates(inputElements, submitButton, options) {
       foundInvalid = true;
     }
   });
-  //   if (foundInvalid) {
-  //     disableButton(submitButton, options.inactiveButtonClass);
-  //     return (submitButton.disabled = true);
-  //   }
-  //   enableButton(submitButton, options.inactiveButtonClass);
-  //   submitButton.disabled = false;
-  // }
 
   if (foundInvalid) {
     disableButton(submitButton, options.inactiveButtonClass);
@@ -57,6 +60,7 @@ function setEventListeners(formElement, options) {
   const { inputSelector } = options;
   const inputElements = [...formElement.querySelectorAll(inputSelector)];
   const submitButton = formElement.querySelector(options.submitButtonSelector);
+  toggleButtonStates(inputElements, submitButton, options);
   inputElements.forEach((inputElement) => {
     inputElement.addEventListener("input", (e) => {
       checkInputValidity(formElement, inputElement, options);
@@ -80,8 +84,8 @@ const config = {
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__button",
   inactiveButtonClass: "modal__button_type_inactive",
-  inputErrorClass: "modal__input-error",
-  errorClass: "popup__error_visible",
+  inputErrorClass: "modal__form-input_invalid",
+  errorClass: "modal__input-error",
 };
 
 enableValidation(config);
