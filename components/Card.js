@@ -9,19 +9,19 @@ export default class Card {
   _setEventListeners() {
     //".card__like-button"
     this._cardElement
-      .querySelector(".card__button")
+      .querySelector(".card__like-button")
       .addEventListener("click", () => {
         this._handleLikeIcon(this);
       });
     //".card__delete-button"
     this._cardElement
-      .querySelector(".card__trash-icon")
+      .querySelector(".card__delete-button")
       .addEventListener("click", () => {
         this._handleDeleteCard();
       });
     //image preview
     this._cardElement
-      .querySelector(".js-card-image")
+      .querySelector(".card__image")
       .addEventListener("click", () => {
         this._handleImageClick(this);
       });
@@ -29,8 +29,8 @@ export default class Card {
 
   _handleLikeIcon() {
     this._cardElement
-      .querySelector(".card__button")
-      .classList.toggle("card__button_active");
+      .querySelector(".card__like-button")
+      .classList.toggle("card__like-button_active");
   }
   _handleDeleteCard() {
     this._cardElement.remove();
@@ -45,11 +45,11 @@ export default class Card {
       .content.querySelector(".card")
       .cloneNode(true);
     //get the card view
-    const cardImageEL = this._cardElement.querySelector(".js-card-image");
+    const cardImageEL = this._cardElement.querySelector(".card__image");
     cardImageEL.src = this._link;
     cardImageEL.alt = this._name;
 
-    const cardTitleEL = this._cardElement.querySelector(".js-card-title");
+    const cardTitleEL = this._cardElement.querySelector(".card__title");
     cardTitleEL.textContent = cardData.name;
 
     //set event listeners

@@ -47,7 +47,8 @@
 }
 
 .profile__edit-button {
-  background: none;
+  background: transparent url(../images/Edit\ button\ small.svg) center
+    no-repeat;
   border: 1px solid #fff;
   width: 24px;
   height: 24px;
@@ -68,7 +69,7 @@
 }
 
 .profile__add-button {
-  background: none;
+  background: transparent url(../images/Profile_Add_button.png) center no-repeat;
   border: 2px solid #fff;
   width: 150px;
   height: 50px;
