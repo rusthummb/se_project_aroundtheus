@@ -11,150 +11,149 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="pages/index.css" />
   </head>
-</head>
 
-<body class="page">
-  <div class="page__content">
-    <header class="header page__section">
-      <img
-        class="header__image"
-        src="./images/Logo.png"
-        alt="Around the U.S Logo"
-      />
-    </header>
+  <body class="page">
+    <div class="page__content">
+      <header class="header page__section">
+        <img
+          class="header__image"
+          src="./images/Logo.png"
+          alt="Around the U.S Logo"
+        />
+      </header>
 
-    <main class="content">
-      <section class="profile page__section">
-        <img src="./images/Avatar.jpg" alt="Avatar" class="profile__image" />
-        <div class="profile__info">
-          <h1 class="profile__title">Jacques Cousteau</h1>
+      <main class="content">
+        <section class="profile page__section">
+          <img src="./images/Avatar.jpg" alt="Avatar" class="profile__image" />
+          <div class="profile__info">
+            <h1 class="profile__title">Jacques Cousteau</h1>
+
+            <button
+              type="button"
+              class="profile__edit-button"
+              id="profile-edit-button"
+            ></button>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <button type="button" class="profile__add-button"></button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list"></ul>
+        </section>
+      </main>
+
+      <footer class="footer page__section">
+        <p class="footer__copyright">&copy;2023 Rustom Dela Cruz</p>
+      </footer>
+    </div>
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <p class="modal__heading">Edit Profile</p>
+        <form class="modal__form">
+          <label class="modal__label">
+            <input
+              type="text"
+              name="title"
+              id="profile-title-input"
+              placeholder="Name"
+              required
+              class="modal__input modal__input_type_name"
+              minlength="2"
+              maxlength="40"
+            />
+            <span class="modal__error" id="profile-title-input-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              type="text"
+              name="description"
+              id="profile-description-input"
+              class="modal__input modal__input_type_description"
+              placeholder="Description"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
+          </label>
+          <button
+            type="submit"
+            class="modal__button modal__button_disabled"
+            disabled
+          >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <p class="modal__heading">New Place</p>
+        <form class="modal__form" id="add-card-form">
+          <label class="modal__label">
+            <input
+              type="text"
+              name="title"
+              id="card-title-input"
+              placeholder="Title"
+              class="modal__input modal__input_type_title"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+            <span class="modal__error" id="card-title-input-error"></span>
+          </label>
+
+          <label class="modal__label">
+            <input
+              type="url"
+              name="url"
+              id="card-url-input"
+              class="modal__input modal__input_type_url"
+              placeholder="Image link"
+              required
+            />
+            <span class="modal__error" id="card-url-input-error"></span>
+          </label>
 
           <button
-            type="button"
-            class="profile__edit-button"
-            id="profile-edit-button"
-          ></button>
-          <p class="profile__description">Explorer</p>
-        </div>
-        <button type="button" class="profile__add-button"></button>
-      </section>
-      <section class="cards page__section">
-        <ul class="cards__list"></ul>
-      </section>
-    </main>
-
-    <footer class="footer page__section">
-      <p class="footer__copyright">&copy;2023 Rustom Dela Cruz</p>
-    </footer>
-  </div>
-  <div class="modal" id="profile-edit-modal">
-    <div class="modal__container">
-      <button class="modal__close" type="button"></button>
-      <p class="modal__heading">Edit Profile</p>
-      <form class="modal__form">
-        <label class="modal__label">
-          <input
-            type="text"
-            name="title"
-            id="profile-title-input"
-            placeholder="Name"
-            required
-            class="modal__input modal__input_type_name"
-            minlength="2"
-            maxlength="40"
-          />
-          <span class="modal__error" id="profile-title-input-error"></span>
-        </label>
-        <label class="modal__label">
-          <input
-            type="text"
-            name="description"
-            id="profile-description-input"
-            class="modal__input modal__input_type_description"
-            placeholder="Description"
-            minlength="2"
-            maxlength="200"
-            required
-          />
-          <span
-            class="modal__error"
-            id="profile-description-input-error"
-          ></span>
-        </label>
-        <button
-          type="submit"
-          class="modal__button modal__button_disabled"
-          disabled
-        >
-          Save
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal" id="add-card-modal">
-    <div class="modal__container">
-      <button class="modal__close" type="button"></button>
-      <p class="modal__heading">New Place</p>
-      <form class="modal__form" id="add-card-form">
-        <label class="modal__label">
-          <input
-            type="text"
-            name="title"
-            id="card-title-input"
-            placeholder="Title"
-            class="modal__input modal__input_type_title"
-            minlength="1"
-            maxlength="30"
-            required
-          />
-          <span class="modal__error" id="card-title-input-error"></span>
-        </label>
-
-        <label class="modal__label">
-          <input
-            type="url"
-            name="url"
-            id="card-url-input"
-            class="modal__input modal__input_type_url"
-            placeholder="Image link"
-            required
-          />
-          <span class="modal__error" id="card-url-input-error"></span>
-        </label>
-
-        <button
-          type="submit"
-          class="modal__button modal__button_disabled"
-          disabled
-        >
-          Create
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal" id="preview-image-modal">
-    <div class="modal__container modal__container_preview">
-      <button
-        class="modal__close modal__close_preview"
-        type="button"
-      ></button>
-      <img src="#" alt="#" class="modal__image modal__image_preview" />
-      <h3 class="modal__title modal__title_preview"></h3>
-    </div>
-  </div>
-
-  <template id="card-template">
-    <li class="card">
-      <button type="button" class="card__delete-button"></button>
-      <img src="" alt="" class="card__image" />
-      <div class="card__description">
-        <h2 class="card__title"></h2>
-        <button type="button" class="card__like-button"></button>
+            type="submit"
+            class="modal__button modal__button_disabled"
+            disabled
+          >
+            Create
+          </button>
+        </form>
       </div>
-    </li>
-  </template>
-  <script src="./pages/index.js" type="module"></script>
-</body>
+    </div>
+
+    <div class="modal" id="preview-image-modal">
+      <div class="modal__container modal__container_preview">
+        <button
+          class="modal__close modal__close_preview"
+          type="button"
+        ></button>
+        <img src="#" alt="#" class="modal__image modal__image_preview" />
+        <h3 class="modal__title modal__title_preview"></h3>
+      </div>
+    </div>
+
+    <template id="card-template">
+      <li class="card">
+        <button type="button" class="card__delete-button"></button>
+        <img src="" alt="" class="card__image" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button type="button" class="card__like-button"></button>
+        </div>
+      </li>
+    </template>
+    <script src="./pages/index.js" type="module"></script>
+  </body>
 </html>
