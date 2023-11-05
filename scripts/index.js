@@ -1,3 +1,6 @@
+import Card from "../components/Card.js";
+import FormValidation from "../Components/FormValidator.js";
+
 const initialCards = [
   {
     name: "Lago di Braies",
@@ -24,6 +27,14 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
   },
 ];
+
+const cardData = {
+  name: "Lago di Braies",
+  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
+};
+
+const card = new Card(cardData, "#card-template");
+card.getView();
 
 /* -------------------------------------------------------------------------- */
 /*                                  Elements                                  */
@@ -95,11 +106,11 @@ function getCardsElement(cardData) {
   const likeButton = cardElement.querySelector(".card__button");
   const trashButton = cardElement.querySelector(".card__trash-icon");
 
-  trashButton.addEventListener("click", () => {
+  trashButton.addEventListener("click", (handleDeleteCard) => {
     cardElement.remove();
   });
 
-  likeButton.addEventListener("click", () => {
+  likeButton.addEventListener("click", (handleLikeIcon) => {
     likeButton.classList.toggle("card__button_active");
   });
 
@@ -157,6 +168,14 @@ function handleEsc(e) {
     const modal = document.querySelector(".modal_opened");
     closePopup(modal);
   }
+
+  //const handleLikeIcon = (evt) => {
+  //  evt.target.classList.toggle("card__button_active");
+  // };
+
+  // const _handleDeleteCard = (evt) => {
+  //  evt.target.closest(".card").remove();
+  // };
 }
 
 /* -------------------------------------------------------------------------- */
