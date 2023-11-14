@@ -120,7 +120,7 @@
   opacity: 0.5;
   transition: opacity 1s ease;
 }
-.modal__button:hover {
+.modal__button:hover:not(:disabled) {
   opacity: 0.8;
 }
 .modal__image_preview {

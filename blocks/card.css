@@ -9,6 +9,7 @@
   width: 282px;
   height: 282px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .card__description {
   display: flex;
@@ -56,6 +57,7 @@
   border: none;
   top: 18px;
   right: 15px;
+  cursor: pointer;
 }
 .card__delete-button:hover {
   opacity: 60%;
